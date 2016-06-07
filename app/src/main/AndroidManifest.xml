@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cv.andevelopnica.com.crediveloz">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GastosActivity"
+            android:label="@string/app_gastos"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".LobbyActivity"
+            android:label="@string/app_lobby"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".CobrosActivity"
+            android:label="@string/app_cobros"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".PagosActivity"
+            android:label="@string/app_pagos"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".CobroClientesActivity"
+            android:label="@string/app_clientes"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".CobroSucursalActivity"
+            android:label="@string/app_ruta"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".HistorialPagosActivity"
+            android:label="@string/app_buscar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".BusquedaDesembolsoActivity"
+            android:label="@string/app_buscar_desembolso"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DetalleFinalActivity"
+            android:label="@string/app_entrega"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DesembolsoClientesActivity"
+            android:label="@string/app_desembolsoclientes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DesembolsoSucursalActivity"
+            android:label="@string/app_desembolsosucur"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DesembolsoActivity"
+            android:label="@string/app_desembolso"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ProgramacionActvity"
+            android:label="@string/app_programacion"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AgregarProgramacion"
+            android:label="@string/app_addnota"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ModificarProgramacion"
+            android:label="@string/app_editnota"
+            android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+
+</manifest>

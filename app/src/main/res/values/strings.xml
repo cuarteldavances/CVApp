@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Credi Veloz</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_gastos">Gastos</string>
+    <string name="app_lobby">Lobby</string>
+    <string name="app_pagos">Pagos</string>
+    <string name="app_cobros">Cobrar a...</string>
+    <string name="app_clientes">Cobrar a Clientes</string>
+    <string name="app_ruta">Cobrar a Sucursal</string>
+    <string name="app_buscar">Buscar Historial</string>
+    <string name="app_entrega">Entrega</string>
+    <string name="app_desembolso">Desembolso a...</string>
+    <string name="app_desembolsoclientes">Desembolsar a Cliente</string>
+    <string name="app_desembolsosucur">Desembolsar a sucursal</string>
+    <string name="app_buscar_desembolso">Desembolsar a...</string>
+    <string name="cobrosbtn">Cobros</string>
+    <string name="pagosbtn">pagos</string>
+    <string name="app_programacion">Programacion</string>
+    <string name="app_addnota">Agregar Nota</string>
+    <string name="app_editnota">Modificar Nota</string>
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#dddddd" />
+
+        <ImageView
+            android:layout_width="195dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/logomaincv" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/relativeLayout13">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView12"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/logincv" />
+
+            <EditText
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:id="@+id/edt_usuario"
+                android:inputType="textPersonName"
+                android:layout_marginTop="74dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="43dp"
+                android:layout_marginEnd="55dp"
+                android:background="#e5e6e6"
+                android:maxLength="16"
+                android:hint="Usuario"
+                android:paddingLeft="5dp" />
+
+            <EditText
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:id="@+id/edt_passwd"
+                android:background="#e5e6e6"
+                android:layout_below="@+id/edt_usuario"
+                android:layout_alignLeft="@+id/edt_usuario"
+                android:layout_alignStart="@+id/edt_usuario"
+                android:layout_marginTop="17dp"
+                android:maxLength="12"
+                android:inputType="textPassword"
+                android:hint="Contraseña"
+                android:paddingLeft="5dp" />
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:id="@+id/txtfecha"
+                android:layout_below="@+id/edt_passwd"
+                android:layout_alignLeft="@+id/edt_passwd"
+                android:layout_alignStart="@+id/edt_passwd"
+                android:layout_marginTop="13dp"
+                android:background="#e5e6e6"
+                android:textColor="#000"
+                android:paddingTop="9dp"
+                android:textStyle="bold"
+                android:paddingLeft="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Acceder"
+                    android:id="@+id/btn_login"
+                    android:background="#001A5A"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="47dp"
+                    android:layout_marginBottom="7dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#001A5A"
+            android:id="@+id/relativeLayout12">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/copyrightyear"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentEnd="false"
+                android:layout_marginTop="13dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>

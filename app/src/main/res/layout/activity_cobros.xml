@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cv.andevelopnica.com.crediveloz.CobrosActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#dddddd" />
+
+    <ImageView
+        android:layout_width="195dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@mipmap/logomaincv" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout21"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abonar"
+            android:id="@+id/btn_bbuscarnom"
+            android:background="#002C83"
+            android:textStyle="normal"
+            android:textColor="#FFF"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="3dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/relativeLayout20"
+            android:layout_toLeftOf="@+id/btn_bbuscarnom"
+            android:layout_toStartOf="@+id/btn_bbuscarnom">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/edt_bnombre"
+                android:background="#dddddd"
+                android:padding="8dp"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/relativeLayout23"
+        android:layout_below="@+id/relativeLayout21"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monto:"
+            android:id="@+id/textView25"
+            android:textStyle="normal"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_bmonto"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView25"
+            android:layout_toEndOf="@+id/textView25"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:focusable="false"
+            android:editable="true"
+            android:numeric="decimal"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abono:"
+            android:id="@+id/textView24"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_alignBaseline="@+id/edt_babono"
+            android:layout_alignBottom="@+id/edt_babono"
+            android:layout_toRightOf="@+id/edt_bmonto"
+            android:layout_toEndOf="@+id/edt_bmonto"
+            android:layout_marginBottom="2dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_babono"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:numeric="decimal"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView24"
+            android:layout_toEndOf="@+id/textView24"
+            android:layout_marginBottom="2dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout23"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/relativeLayout24"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuota:"
+            android:id="@+id/textView26"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="normal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginBottom="2dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_bcuota"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView26"
+            android:layout_toEndOf="@+id/textView26"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:focusable="false"
+            android:editable="true"
+            android:numeric="decimal"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saldo:"
+            android:id="@+id/textView27"
+            android:layout_alignBaseline="@+id/edt_bcuota"
+            android:layout_alignBottom="@+id/edt_bcuota"
+            android:layout_toRightOf="@+id/edt_bcuota"
+            android:layout_toEndOf="@+id/edt_bcuota"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="2dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_bsaldo"
+            android:layout_alignBaseline="@+id/textView27"
+            android:layout_alignBottom="@+id/textView27"
+            android:layout_toRightOf="@+id/textView27"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:focusable="false"
+            android:editable="true"
+            android:numeric="decimal"
+            android:layout_marginBottom="2dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#dddddd">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/bottomcv2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout24"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/relativeLayout25"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono:"
+            android:id="@+id/textView29"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="normal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginBottom="2dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/edt_btelefono"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView29"
+            android:layout_toEndOf="@+id/textView29"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"
+            android:numeric="decimal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout25"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/relativeLayout26"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dirección:"
+            android:id="@+id/textView30"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="2dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/edt_bdireccion"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView30"
+            android:layout_toEndOf="@+id/textView30"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout26"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/relativeLayout27">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ultimo Abono:"
+            android:id="@+id/textView31"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="normal"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginBottom="2dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/edt_bultimoabono"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView31"
+            android:layout_toEndOf="@+id/textView31"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"
+            android:numeric="decimal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout27"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:text="Historial de pagos"
+            android:id="@+id/btn_historialpagos"
+            android:background="#002C83"
+            android:textStyle="normal"
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cartera:"
+            android:id="@+id/tv_bidcartera"
+            android:layout_alignBaseline="@+id/btn_historialpagos"
+            android:layout_alignBottom="@+id/btn_historialpagos"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="normal"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
