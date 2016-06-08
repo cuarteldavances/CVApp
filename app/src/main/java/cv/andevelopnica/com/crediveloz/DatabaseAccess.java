@@ -572,6 +572,17 @@ public class DatabaseAccess extends Activity {
         return  foundidvendedor;
     }
 
+    public String ObtenerRuta(){
+        Cursor cursor;
+        cursor = database.rawQuery("select nombre from usuario where id_vendedor = (select max(id_vendedor) from vendedoractual)",null);
+
+        cursor.moveToFirst();
+
+        String foundidvendedor =cursor.getString(0);
+
+        return  foundidvendedor;
+    }
+
 
     public Integer ObtenerIdcartera(){
         database.execSQL("update configuracion set id_mincartera = (select min(id_mincartera) -1 from configuracion )");

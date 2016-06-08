@@ -39,11 +39,13 @@ public class CobroClientesActivity extends AppCompatActivity
     private RecyclerView.LayoutManager mLayoutManager;
     private ItemTouchHelper mItemTouchHelper;
     private List<Customer> mCustomers;
+    private TextView tvruta;
 
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
     public static final String LIST_OF_SORTED_DATA_ID = "json_list_sorted_data_id";
     public final static String PREFERENCE_FILE = "preference_file";
+    DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
 
 
 
@@ -54,9 +56,12 @@ public class CobroClientesActivity extends AppCompatActivity
 
         //setSupportActionBar(mToolbar);
         tvsucur = (TextView) findViewById(R.id.tv_sucursal);
+        tvruta = (TextView) findViewById(R.id.tv_ruta);
         Bundle bundle = getIntent().getExtras();
         tvsucur.setText(bundle.getString("nme"));
-
+        databaseAccess.open();
+        tvruta.setText(databaseAccess.ObtenerRuta());
+        databaseAccess.open();
         mSharedPreferences = this.getApplicationContext()
                 .getSharedPreferences(PREFERENCE_FILE, Context.MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
