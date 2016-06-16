@@ -206,7 +206,7 @@ public class CobrosActivity extends AppCompatActivity implements View.OnClickLis
                         @Override
                         public void onClick(DialogInterface dialog, int which){
 
-                            try {
+//                            try {
                             //Aplicar abono
                             databaseAccess.open();
                             String showid_sucursal = databaseAccess.ObtenerIdSucursal(SUCURSAL); //--PARAMETRO--//
@@ -244,13 +244,15 @@ public class CobrosActivity extends AppCompatActivity implements View.OnClickLis
                             double divi = intabono/intcuota;
                             double showporcentualD =  divi*100; //--PARAMETRO--//
 
-                            DecimalFormat format = new DecimalFormat();
-                            format.setDecimalSeparatorAlwaysShown(false);
-                                DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-                                symbols.setDecimalSeparator('.');
-                                symbols.setGroupingSeparator(' ');
-                                format.setDecimalFormatSymbols(symbols);
-                            String Nporcen = format.format(showporcentualD);
+//                            DecimalFormat format = new DecimalFormat();
+//                            format.setDecimalSeparatorAlwaysShown(false);
+//                                DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+//                                symbols.setDecimalSeparator('.');
+//                                symbols.setGroupingSeparator(' ');
+//                                format.setDecimalFormatSymbols(symbols);
+//                            //format.setGroupingUsed(false);
+//                            String Nporcen = format.format(showporcentualD);
+                            String Nporcen = String.valueOf(showporcentualD);
 
                             //Comprobando salida
                             //Toast toast = Toast.makeText(this, String.valueOf(showporcentual), Toast.LENGTH_SHORT);
@@ -270,11 +272,11 @@ public class CobrosActivity extends AppCompatActivity implements View.OnClickLis
                             Toast toast = Toast.makeText(getApplicationContext(), "Abono Exitoso!", Toast.LENGTH_SHORT);
                             toast.show();
                             etabono.setText("");
-                            }catch (Exception ex){
-                                tvIdCartera.setText(ex.getMessage());
-                                Toast toast = Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT);
-                                toast.show();
-                            }
+//                            }catch (Exception ex){
+//                                tvIdCartera.setText(ex.getMessage());
+//                                Toast toast = Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_SHORT);
+//                                toast.show();
+//                            }
                         }
                     })
                     .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

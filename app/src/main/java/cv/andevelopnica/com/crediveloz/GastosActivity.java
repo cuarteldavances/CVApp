@@ -218,22 +218,22 @@ public class GastosActivity extends AppCompatActivity implements View.OnClickLis
         if(desembolsohoy != null){
             Phoy = databaseAccess.DesembolsoFinalHoy();
         }
-        int dineroacumlado;
-        dineroacumlado = Integer.parseInt(Choy) + Integer.parseInt(LLvhoy) - Integer.parseInt(Ghoy) - Integer.parseInt(Phoy);
+        double dineroacumlado;
+        dineroacumlado = Double.parseDouble(Choy) + Double.parseDouble(LLvhoy) - Double.parseDouble(Ghoy) - Double.parseDouble(Phoy);
 
         databaseAccess.close();
 
-        if (dineroacumlado < Integer.parseInt(etgasolina.getText().toString()) + Integer.parseInt(etotros.getText().toString())){
+        if (dineroacumlado < Double.parseDouble(etgasolina.getText().toString()) + Double.parseDouble(etotros.getText().toString())){
             Toast.makeText(this, "Fondo insuficiente.", Toast.LENGTH_LONG).show();
         }
-        if (dineroacumlado > Integer.parseInt(etotros.getText().toString()) + Integer.parseInt(etgasolina.getText().toString())){
+        if (dineroacumlado > Double.parseDouble(etotros.getText().toString()) + Double.parseDouble(etgasolina.getText().toString())){
             siclick = true;
             lanzardialogo();
         }
     }
 
     public boolean lanzardialogo(){
-        Integer sumag = Integer.parseInt(etotros.getText().toString())+Integer.parseInt(etgasolina.getText().toString());
+        Double sumag = Double.parseDouble(etotros.getText().toString())+Double.parseDouble(etgasolina.getText().toString());
         String sms_chkdetalles = null;
         sms_chkdetalles = "Total de gastos a ingresar C$"+sumag.toString()+".\n";
         if(Integer.parseInt(etotros.getText().toString()) > 0 & TextUtils.isEmpty(etdetalle.getText().toString()) ){

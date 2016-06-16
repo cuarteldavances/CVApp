@@ -241,19 +241,19 @@ public class BusquedaDesembolsoActivity extends AppCompatActivity implements Tex
                     Ghoy = databaseAccess.GastosFinalHoy();
                 }
 
-                Integer cajahoy = Integer.parseInt(LLvhoy) + Integer.parseInt(Choy) - Integer.parseInt(Ghoy);
+                Double cajahoy = Double.parseDouble(LLvhoy) + Double.parseDouble(Choy) - Double.parseDouble(Ghoy);
 
                 databaseAccess.close();
 
-                if(cajahoy < Integer.parseInt(etd_monto.getText().toString())){
+                if(cajahoy < Double.parseDouble(etd_monto.getText().toString())){
                     Toast.makeText(getBaseContext(), "Fondo insuficiente.",
                             Toast.LENGTH_LONG).show();
                 }
 
-                if(cajahoy >= Integer.parseInt(etd_monto.getText().toString())){
+                if(cajahoy >= Double.parseDouble(etd_monto.getText().toString())){
                     //databaseAccess.ObtenerIdClienteFromCliente(etnombre.getText().toString());
                     databaseAccess.open();
-                    Integer sAldoCliente = databaseAccess.ComprbarCartera(databaseAccess.ObtenerIdClienteFromCliente(etnombre.getText().toString()));
+                    Double sAldoCliente = databaseAccess.ComprbarCartera(databaseAccess.ObtenerIdClienteFromCliente(etnombre.getText().toString()));
 //                    Toast.makeText(getBaseContext(), String.valueOf(sAldoCliente),
 //                            Toast.LENGTH_LONG).show();
                     databaseAccess.close();
@@ -262,10 +262,18 @@ public class BusquedaDesembolsoActivity extends AppCompatActivity implements Tex
                                 Toast.LENGTH_LONG).show();
                         btnd_desembolsar.setEnabled(true);
                     }
-                    if (sAldoCliente == 0 ) {
-                    clicke = true;
-                    lanzardialogo();
+                    if(Double.parseDouble(etd_monto.getText().toString()) > 30000){
+                        Toast.makeText(getBaseContext(), "No autorizado!",
+                                Toast.LENGTH_LONG).show();
+                        btnd_desembolsar.setEnabled(true);
                     }
+                    if(Double.parseDouble(etd_monto.getText().toString()) <= 30000){
+                        if (sAldoCliente == 0 ) {
+                            clicke = true;
+                            lanzardialogo();
+                        }
+                    }
+
 
 
 //            Toast.makeText(v.getContext(), "Aqui ta tu pishto!",

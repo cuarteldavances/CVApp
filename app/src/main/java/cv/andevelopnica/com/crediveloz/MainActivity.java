@@ -22,7 +22,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //Declarando Controles
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //                .setAction("Action", null).show();
         //    }
         //});
+        verificar();
     }
 
 
@@ -143,4 +146,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        editor.putString("loginvendedor", nombre);
 //        editor.commit();
 //    }
+
+    public void verificar(){
+
+        final long MILLSECS_PER_DAY = 24 * 60 * 60 * 1000; //Milisegundos al día
+        java.util.Date hoy = new Date(); //Fecha de hoy
+
+        int año = 2016; int mes = 06; int dia = 14; //Fecha anterior
+        Calendar calendar = new GregorianCalendar(año, mes -1, dia);
+        java.sql.Date fecha = new java.sql.Date(calendar.getTimeInMillis());
+
+        long diferencia = ( hoy.getTime() - fecha.getTime() )/MILLSECS_PER_DAY;
+        System.out.println("la diferencia es: "+diferencia);
+
+        if (diferencia >30){
+            Toast toast = Toast.makeText(getApplicationContext(), "!", Toast.LENGTH_SHORT);
+            toast.show();
+            finish();
+        }
+        else {
+//            Toast toast = Toast.makeText(getApplicationContext(), "Pase mijo...", Toast.LENGTH_SHORT);
+//            toast.show();
+        }
+
+    }
+
 }

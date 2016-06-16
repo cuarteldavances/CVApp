@@ -614,12 +614,12 @@ public class DatabaseAccess extends Activity {
 
     }
 
-    public Integer ComprbarCartera(String idCliente){
+    public Double ComprbarCartera(String idCliente){
         Cursor cursor;
         cursor = database.rawQuery("select sum(saldo) from cartera where id_cliente = "+idCliente+"",null);
         cursor.moveToFirst();
         String foundidCliente =cursor.getString(0);
-        return Integer.parseInt(foundidCliente);
+        return Double.parseDouble(foundidCliente);
 
     }
 
